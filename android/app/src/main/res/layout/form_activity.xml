@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:rowCount="5"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp">
+            <TextView
+                android:text="Nom"
+                android:textSize="16sp"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:layout_gravity="center" />
+            <EditText
+                android:id="@+id/nomEditText"
+                android:textSize="16sp"
+                android:layout_column="1"
+                android:layout_width="80dp"
+                android:layout_row="0"
+                android:layout_gravity="center"
+                android:background="@drawable/edit_rectanglebox"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:scrollHorizontally="false" />
+
+            <TextView
+                android:text="Telf"
+                android:textSize="16sp"
+                android:layout_column="2"
+                android:layout_row="0"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp" />
+            <EditText
+                android:id="@+id/telfEditText"
+                android:textSize="16sp"
+                android:layout_column="3"
+                android:layout_width="80dp"
+                android:layout_row="0"
+                android:layout_gravity="center"
+                android:background="@drawable/edit_rectanglebox"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp" />
+
+            <TextView
+                android:text="Entrada"
+                android:textSize="16sp"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"/>
+            <TextView
+                android:id="@+id/entradaTextView"
+                android:hint="Y-m-d"
+                android:clickable="true"
+                android:textSize="16sp"
+                android:layout_column="1"
+                android:layout_width="80dp"
+                android:layout_row="1"
+                android:layout_gravity="center"
+                android:background="@drawable/edit_rectanglebox"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:scrollHorizontally="false"
+                android:layout_marginTop="20dp"
+                android:focusable="true" />
+
+            <TextView
+                android:text="Sortida"
+                android:textSize="16sp"
+                android:layout_column="2"
+                android:layout_row="1"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"/>
+            <TextView
+                android:id="@+id/sortidaTextView"
+                android:hint="Y-m-d"
+                android:clickable="true"
+                android:textSize="16sp"
+                android:layout_column="3"
+                android:layout_width="80dp"
+                android:layout_row="1"
+                android:layout_gravity="center"
+                android:background="@drawable/edit_rectanglebox"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:focusable="true" />
+
+            <TextView
+                android:text="Places"
+                android:layout_marginRight="10dp"
+                android:textSize="16sp"
+                android:layout_column="0"
+                android:layout_columnSpan="2"
+                android:layout_row="2"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"/>
+
+            <EditText
+                android:id="@+id/placesNumPicker"
+                android:layout_column="2"
+                android:layout_columnSpan="2"
+                android:layout_marginBottom="10dp"
+                android:layout_width="80dp"
+                android:layout_row="2"
+                android:layout_gravity="left"
+                android:background="@drawable/edit_rectanglebox"
+                android:inputType="number"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkedButton="@+id/rdbOne"
+                android:layout_column="0"
+                android:layout_row="3"
+                android:layout_columnSpan="4">
+                <RadioButton
+                    android:id="@+id/rdbOne"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:layout_height="wrap_content"
+                    android:text="MP"/>
+                <RadioButton
+                    android:id="@+id/rdbTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:layout_height="wrap_content"
+                    android:text="PCP"/>
+                <RadioButton
+                    android:id="@+id/rdbThree"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:layout_height="wrap_content"
+                    android:text="PCU"/>
+
+                <RadioButton
+                    android:id="@+id/rdbFour"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:layout_height="wrap_content"
+                    android:text="Dinar"/>
+            </RadioGroup>
+
+        </GridLayout>
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_marginTop="50dp"
+            android:layout_margin="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+
+        <TextView
+            android:id="@+id/timeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <Button
+            android:id="@+id/playButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@android:drawable/ic_media_play"
+            android:background="#e06a1b"
+            android:backgroundTint="#e06a1b"
+            android:textColor="#ffffff"
+            android:text="PLAY" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/saveButton"
+                android:text="Guardar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:background="#3495eb"
+                android:backgroundTint="#3495eb"
+                android:textColor="#ffffff"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/webViewButton"
+                android:text="Formulari"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:background="#c23030"
+                android:backgroundTint="#c23030"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                android:layout_marginStart="30dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
